@@ -1,22 +1,26 @@
 *{
-    padding: 15px;
+    padding: 5px;
     background-color: #dcebcb;
 }
 body {
+    
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
+.dos{
+    width: 85%;
+}
 .seccion {
-    background-color: #0f460f; /* Verde claro */
+    background-color: #0f460f; 
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
 }
 
 .contenedor {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -24,6 +28,7 @@ body {
     background-color: #11cfa0;
     border-radius: 5px;
     padding: 10px;
+    width: 30%;
     text-align: center;
 }
 
