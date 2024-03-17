@@ -1,5 +1,3 @@
-
-
     function convertAllActivities() {
         //Seleccionar el contenedor donde queremos agregar las actividades.
         
@@ -33,6 +31,8 @@
                 const htmlDescription = document.createElement('p');
                 
                 const htmlImg = document.createElement('img');
+
+                const htmlIcono = document.createElement('span');
             
                 //Asignar los valores a las propiedades correspondientes a cada uno de los elementos.
                 //Ej: a la propiedad innerHTML del elemento del título, asignar el valor correspondiente.
@@ -40,12 +40,13 @@
                 htmlTitle.innerHTML = title;
                 htmlDescription.innerHTML = descripcion;
                 htmlImg.src = imgUrl;
-            
+                htmlIcono.innerHTML= '<img src="./img/borar.jpg" alt="Borar Actividad">';
+             
                 //Agregar a los elementos las clases CSS correspondientes
                 //que hayas implementado para darles estilos.
                 htmlTitle.classList.add('class-title');
                 htmlDescription.classList.add('class-description');
-            
+                htmlIcono.id = 'icono';
                 //Crear un elemento <div> que será la tarjeta donde incluiremos todos los demás elementos.
             
                 
@@ -57,13 +58,17 @@
             containerHTML.appendChild(htmlTitle);
             containerHTML.appendChild(htmlDescription);
             containerHTML.appendChild(htmlImg);
+
+            containerHTML.appendChild(htmlIcono);
             //Asignar al <div> la clase CSS que tengas implementada para darle estilos.
                 
             //Retornar el <div> finalizado con todos los elementos correspondientes dentro
             
-            containerHTML.className='card';
+            containerHTML.className='celdas';
             containerHTML.id='activity-card'+id;
             
+            htmlIcono.addEventListener("click", () => borrarActividad(id));
+
             return containerHTML;
 
             }
@@ -78,7 +83,6 @@
         const imgUrlInput = document.getElementById('img-url-input');
     
         //Tomar los valores ingresados en los inputs y guardarlos en variables.
-    
         //Validar que estos valores estén completos. De lo contrario deberá cortar
         //el proceso y mostrar un mensaje avisando al usuario de que hay datos incompletos.
         const titleValue = titleInput.value
@@ -94,12 +98,20 @@
         }
         
         repository.createActivity(titleValue,descriptionValue,imgUrlValue);
+        
+        titleInput.value = '';
+        descriptionInput.value = '';
+        imgUrlInput.value = '';
+
         convertAllActivities();
         
         
         }
     
-      
+    function borrarActividad(id) {
+            repository.deleteActivity(id);
+            convertAllActivities();
+    } 
     
     
     

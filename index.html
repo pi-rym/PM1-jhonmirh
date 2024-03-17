@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JHON MIGUEL RODRIGUEZ</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/styles.css">
+    <title>JHON MIGUEL RODRIGUEZ</title>
 </head>
 
 <body>
     <header>
         <div class="dos">
             <h1>JHON MIGUEL RODRIGUEZ HERNANDEZ</h1>
-            <h2>MI PAGINA WEB</h2>
+            <br>
+            <h1>MI PAGINA WEB</h1>
+            <br>
             Soy Docente de Informática en Venezuela. Actualmente Director de una Escuela Técnica. Programador de os primeros lenguajes Estructurados y POO, de los ultimos he diseñado varios sistemas con Delphi y Visual Basic .NET con Base de Datos en Access y Sql Server. Con deseos de Actualizarme a ambiente Web
         </div>
     </header>
     <main>
     <div class="dos">
         <h1>MIS TECNOLOGIAS FAVORITAS</h1>
+        <br>
         <div class="contenedor">
             <div class="celdas"><img src="./img/css.jpeg" alt="CSS"></div>
             <div class="celdas"><img src="./img/html.jpeg" alt="CSS"></div>
@@ -26,24 +29,34 @@
             <div class="celdas"><img src="./img/js.jpeg" alt="CSS"></div>
             <div class="celdas"><img src="./img/node.jpeg" alt="CSS"></div>
             <div class="celdas"><img src="./img/react.png" alt="CSS"></div>
+            <br>
         </div>
     </div>
     <div class="dos">
+        <br>
+
         <h1>MIS ACTIVIDADES FAVORITAS</h2>
+        <br>
         <form class="formulario">
       
+            <label for="title-input">Titulo de la Actividad</label>
             <input type="text" placeholder="Titulo de la Actividad" id="title-input">
+            <label for="description-input">Descripción de la Actividad</label>
             <input type="text" placeholder="Descripción de la Actividad" id="description-input">
-            <input type="text" placeholder="Link de Imagen" id="img-url-input">
+            <label for="img-url-input">Imágen de la Actividad</label>
+            <input type="url" placeholder="Link de Imagen" id="img-url-input">
+            <br>
             <button type="submit" id="button">Agregar Actividad</button>
+            <br>
         </form>
+
     </div>
-    <section class="activities-container">
-        <h2>ACTIVIDADES</div>
-        <article class="organizadorTarjetas" id="activities-container">
-                  
+    <section class="contenedor">
+        <h2>MIS NUEVAS ACTIVIDADES</div>
+        <article class="new-cards" id="activities-container">
+          
         </article>
-      </section>
+    </section>
 </main>
 </body>
 <script src="./scripts/index.js"></script>

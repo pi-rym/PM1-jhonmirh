@@ -23,6 +23,10 @@ class Repository{
         this.activities.push(activity);
     }
 
-deleteActivity(id) {   this.activities = this.activities.filter(activity => activity.id !== id)
+deleteActivity(id) {
+    
+    const search = this.activities.filter((activity) => activity.id !== id);
+    this.activities = search;
+    return "ACTIVIDAD ELIMINADA!!!";
 }
 }

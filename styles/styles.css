@@ -1,9 +1,18 @@
 *{
-    padding: 5px;
+    padding: 20px;;
     background-color: #dcebcb;
+    font-style: normal;
+    font-weight:200;
+    font-size: 20px;
+}
+
+header{
+  
+    padding: 20px;
+    align-items: center;
 }
 body {
-    
+
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -38,16 +47,13 @@ body {
 .formulario {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+   
 }
 
 button {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #555555;
-}
-
-button {
     background-color: #4CAF50;
     color: white;
     cursor: pointer;
@@ -57,29 +63,50 @@ button:hover {
     background-color: #45a049;
 }
 
-input:focus,
-button:focus {
+input:focus, button:focus {
     outline: none;
 }
 
 img{
-
         width: 100px;
         height: 100px;
-    
 }
 
 h1{
+
     text-align: center;
     align-items: center;
     background-color: #45a049;
+    font-size:xx-large;
 }
 
 h2{
+    color: antiquewhite;
     text-align: center;
     align-items: center;
+    background-color: #022704;
+    width: 85%;
+
 }
 
 input:hover{
 background-color:burlywood;
+}
+
+#description-input{
+    text-align:start;
+    height: 100px;
+}
+.new-cards{
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+#icono{
+    cursor: pointer;
+}
+
+label{
+    font-style:unset;
+    text-align: center;
 }
