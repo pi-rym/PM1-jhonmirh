@@ -30,3 +30,5 @@ deleteActivity(id) {
     return "ACTIVIDAD ELIMINADA!!!";
 }
 }
+
+module.exports={Repository,Activity}
