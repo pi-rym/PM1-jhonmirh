@@ -20,13 +20,33 @@ it('Debe ser una clase', ()=> {
   expect(typeof Activity.prototype.constructor).toBe('function');
 });
 
-it('Debe contener un método createActivity', ()=> {
-  expect(typeof Repository.prototype.createActivity).toBe('function');
+it('Debe ser una clase de instancia Repository', ()=> {
+  expect(repository instanceof repository).toBe(true);
+
 });
 
 it('Debe contener un método getallActivities', ()=> {
   expect(typeof Repository.prototype.getallActivities).toBe('function');
 });
+
+it('Debe contener un método createActivity', ()=> {
+ const expectedActivity={
+  title: 'Actividad 1',
+  description: 'Descripción de la actividad 1',
+  imgUrl: 'la imagen'
+ };
+  repository.createActivity(
+    expectedActivity.title,
+    expectedActivity.description,
+    expectedActivity.imgUrl
+  );
+
+
+
+  expect(repository.getallActivities().length).toBe(1);
+
+ });
+
 
 it('Debe contener un método deleteActivity', ()=> {
   expect(typeof Repository.prototype.deleteActivity).toBe('function');
