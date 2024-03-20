@@ -31,4 +31,4 @@ deleteActivity(id) {
 }
 }
 
-module.exports={Repository,Activity}
+module.exports={Repository,Activity};

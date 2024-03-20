@@ -6,9 +6,11 @@
 //
 
 const { Repository, Activity } = require("../scripts/index");
-
 describe("La Clase Repository",  () => {
 
+beforeEach( () => {
+  this.repository = new Repository();
+});
 
 it('Debe ser una clase', ()=> {
   expect(typeof Repository.prototype.constructor).toBe('function');
